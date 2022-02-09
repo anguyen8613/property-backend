@@ -1,12 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const pool = require("./database");
+const dotenv = require("dotenv");
 const app = express();
 
 app.use(express.json());
 app.use(cors());
+dotenv.config();
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 5003, () => {
   console.log("yeeeehaw");
 });
 
